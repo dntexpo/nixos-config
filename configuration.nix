@@ -5,6 +5,9 @@
 { config, pkgs, ... }:
 
 {
+  # Enable flakes and nix-command
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -85,10 +88,11 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+    shell = pkgs.fish;
   };
 
-  # Install firefox.
   programs.firefox.enable = true;
+  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -100,6 +104,7 @@
     # text editors
     vim
     neovim
+    helix
     # window managers
     # try i3, awesome
     # terminal emulators
