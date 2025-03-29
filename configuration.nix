@@ -118,6 +118,7 @@
     obs-studio
     dbeaver-bin
     nodejs_23
+    prettierd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
