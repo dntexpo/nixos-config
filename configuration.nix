@@ -117,8 +117,12 @@
     vlc
     obs-studio
     dbeaver-bin
+    tree
+    # coding
     nodejs_23
     prettierd
+    typescript-language-server
+    vscode-langservers-extracted
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -1,19 +1,15 @@
-[language-server.tailwindcss-ls]
-command = "tailwindcss-language-server"
-args = ["--stdio"]
-
 [[language]]
 name = "typescript"
-language-servers = ["typescript-language-server", "tailwindcss-ls"]
+language-servers = ["typescript-language-server"]
 formatter = { command = "prettierd", args = ["--stdin-filepath", "file.ts"] }
 
 [[language]]
 name = "html"
-language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+language-servers = ["vscode-html-language-server"]
 formatter = { command = "prettierd", args = ["--stdin-filepath", "file.html"] }
 
 [[language]]
 name = "css"
-language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
+language-servers = ["vscode-css-language-server"]
 formatter = { command = "prettierd", args = ["--stdin-filepath", "file.css"] }
 
