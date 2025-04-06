@@ -118,6 +118,7 @@
     obs-studio
     dbeaver-bin
     tree
+    calibre
     # coding
     nodejs_23
     prettierd
