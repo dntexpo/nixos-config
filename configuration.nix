@@ -119,6 +119,8 @@
     dbeaver-bin
     tree
     calibre
+    htop
+    jq
     # coding
     nodejs_23
     prettierd
