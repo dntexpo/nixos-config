@@ -126,6 +126,8 @@
     prettierd
     typescript-language-server
     vscode-langservers-extracted
+    vimPlugins.vim-plug
+    vimPlugins.vim-lsp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
