@@ -93,6 +93,11 @@
 
   programs.firefox.enable = true;
   programs.fish.enable = true;
+  programs.vim = {
+    enable = true;
+    package = pkgs.vimHugeX;
+  };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -102,8 +107,8 @@
     # browsers
     chromium
     # text editors
-    vim
-    neovim
+    # vim
+    # neovim
     helix
     # window managers
     # try i3, awesome
