@@ -133,6 +133,8 @@
     vscode-langservers-extracted
     vimPlugins.vim-plug
     vimPlugins.vim-lsp
+    vimPlugins.vim-prettier
+    vimPlugins.vim-lsp-settings
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

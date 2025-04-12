@@ -1,6 +1,6 @@
-let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+let data_dir = expand('~/.vim')
 if empty(glob(data_dir . '/autoload/plug.vim'))
-  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  silent execute '!curl -fLo ' . data_dir . '/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -18,7 +18,7 @@ Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 call plug#end()
 
 " Use prettierd
-let g:prettier#exec_cmd_path = 'prettierd'
+let g:prettier#exec_cmd_path = '/run/current-system/sw/bin/prettierd'
 let g:prettier#autoformat = 0
 autocmd FileType javascript,typescript,html,css nnoremap <buffer> <Leader>f :Prettier<CR>
 
