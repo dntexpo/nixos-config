@@ -104,19 +104,11 @@
 
   # List packages installed in system profile.
   environment.systemPackages = with pkgs; [
-    # browsers
     chromium
-    # text editors
-    # vim
-    # neovim
     helix
-    # window managers
-    # try i3, awesome
-    # terminal emulators
+    # sway
     ghostty
-    # shells
     fish
-    # others
     git
     emote
     vlc
@@ -126,15 +118,14 @@
     calibre
     htop
     jq
-    # coding
     nodejs_23
     prettierd
-    typescript-language-server
-    vscode-langservers-extracted
-    vimPlugins.vim-plug
-    vimPlugins.vim-lsp
-    vimPlugins.vim-prettier
-    vimPlugins.vim-lsp-settings
+    # typescript-language-server
+    # vscode-langservers-extracted
+    # vimPlugins.vim-plug
+    # vimPlugins.vim-lsp
+    # vimPlugins.vim-prettier
+    # vimPlugins.vim-lsp-settings
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
