@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
-{
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz";
+in {
   nix.settings.experimental-features = [ 
     "nix-command" "flakes" 
   ];
@@ -8,7 +10,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      <home-manager/nixos>
+      (import "${home-manager}/nixos")
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -100,6 +102,16 @@
     # vimPlugins.vim-prettier
     # vimPlugins.vim-lsp-settings
   ];
+
+  home-manager.users.dante = { pkgs, ... }: {
+    home.packages = with pkgs; [
+      atool
+      httpie
+    ];
+
+    home.stateVersion = "24.11"; # same as your system.stateVersion
+  };
+
 
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
