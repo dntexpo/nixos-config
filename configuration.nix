@@ -65,12 +65,9 @@ in {
     isNormalUser = true;
     description = "dante";
     extraGroups = [ "networkmanager" "wheel" ];
-    # packages = with pkgs; [];
-    shell = pkgs.fish;
   };
 
   programs.firefox.enable = true;
-  programs.fish.enable = true;
   programs.vim = {
     enable = true;
     package = pkgs.vimHugeX;
@@ -80,27 +77,15 @@ in {
 
   environment.systemPackages = with pkgs; [
     chromium
-    helix
-    ghostty
-    fish
+    vscode
     git
     emote
     vlc
     obs-studio
     dbeaver-bin
-    tree
     calibre
     htop
-    jq
     nodejs_23
-    prettierd
-    # sway
-    # typescript-language-server
-    # vscode-langservers-extracted
-    # vimPlugins.vim-plug
-    # vimPlugins.vim-lsp
-    # vimPlugins.vim-prettier
-    # vimPlugins.vim-lsp-settings
   ];
 
   home-manager.users.dante = { pkgs, ... }: {
